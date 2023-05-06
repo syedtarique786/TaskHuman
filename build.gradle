@@ -20,22 +20,26 @@ allprojects {
         target_sdk_version = 33
         compile_sdk_version = 33
 
-        crashlytics_gradle          = "2.5.2"
-        appcompat_v                 = "1.5.1"
+        core_ktx_v                  = "1.7.0"
+        activity_ktx_v              = "1.6.0"
+        appcompat_v                 = "1.6.1"
+        material_v                  = "1.8.0"
         cardview_v                  = "1.0.0"
         constraint_v                = "2.1.4"
         retrofit_v                  = "2.9.0"
         retrofit_logging_v          = "4.9.1"
-        recyclerview_v              = "1.2.1"
+        recyclerview_v              = "1.3.0"
+        multidex_v                  = "2.0.1"
+        splashscreen_v              = "1.0.0"
         coroutines_core_v           = "1.3.8"
         coroutines_and_v            = "1.5.0"
         coroutines_jdk_v            = "1.0.1"
 
         kotlin_ktx_v = "1.3.0"
-        picasso_v = "2.71828"
+        //picasso_v = "2.71828"
         glide_v = '4.12.0'
         kotlin_v = '1.3.72'
-        gson_v = '2.8.7'
+        gson_v = '2.9.0'
         retrofit_rxjava_adapter = "2.4.0"
         releaseDebuggable = false
     }
