@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.syed.humantask.model.*
 import com.syed.humantask.retrofit.Repository
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class SkillViewModel(private val repository: Repository) : ViewModel() {
@@ -20,11 +21,11 @@ class SkillViewModel(private val repository: Repository) : ViewModel() {
         get() = _skillList
 
     private val _addToFav = MutableLiveData<AddFavouriteResponse>()
-    val addToFav: LiveData<AddFavouriteResponse>
+    val addedToFav: LiveData<AddFavouriteResponse>
         get() = _addToFav
 
     private val _removeFromFav = MutableLiveData<RemoveFavouriteResponse>()
-    val removeFromFav: LiveData<RemoveFavouriteResponse>
+    val removedFromFav: LiveData<RemoveFavouriteResponse>
         get() = _removeFromFav
 
 
@@ -46,9 +47,9 @@ class SkillViewModel(private val repository: Repository) : ViewModel() {
         }
     }
 
-    fun removeFromFavourite() {
-        job = viewModelScope.launch {
-            val skillResponse = repository.callRemoveFavouriteApi()
+    fun removeFromFavourite(skillName: RequestBean) {
+        job = viewModelScope.async {
+            val skillResponse = repository.callRemoveFavouriteApi(skillName)
             _removeFromFav.value = skillResponse.response
         }
     }

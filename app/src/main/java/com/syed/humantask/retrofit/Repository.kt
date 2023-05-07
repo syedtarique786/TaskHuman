@@ -27,7 +27,7 @@ class Repository(private val api: ApiServices) {
     }
 
     suspend fun callAddFavouriteApi(): AddFavState {
-        val response = AppRetrofit().apis.requestAddFavourite()
+        val response = api.requestAddFavourite()
         val episodeState: AddFavState = if (response.isSuccessful) {
             val state = AddFavState(
                 response.body() as AddFavouriteResponse,
@@ -46,8 +46,8 @@ class Repository(private val api: ApiServices) {
         return episodeState
     }
 
-    suspend fun callRemoveFavouriteApi(): RemoveFavState {
-        val response = AppRetrofit().apis.requestRemoveFavourite()
+    suspend fun callRemoveFavouriteApi(skillName: RequestBean): RemoveFavState {
+        val response = api.requestRemoveFavourite(skillName)
         val episodeState: RemoveFavState = if (response.isSuccessful) {
             val state = RemoveFavState(
                 response.body() as RemoveFavouriteResponse,

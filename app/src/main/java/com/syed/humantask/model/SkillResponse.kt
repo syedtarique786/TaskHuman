@@ -17,7 +17,7 @@ data class Skill(
     @SerializedName("dictionaryName") val dictionaryName: String,
     @SerializedName("tileBackground") val tileBackground: String,
     @SerializedName("skillIcon") val skillIcon: String,
-    @SerializedName("availability") val availability: Availability,
+    @SerializedName("availability") val availability: Availability?,
     @SerializedName("moreProvidersAvailable") val moreProvidersAvailable: Boolean,
     @SerializedName("providerInfo") val providerInfo: List<ProviderInfoX>,
     @SerializedName("isFavorite") val isFavorite: Boolean,
@@ -53,7 +53,7 @@ data class BlogMetaData(
 
 data class ProviderInfoX(
     //@SerializedName("endTime") val endTime: Long,
-    @SerializedName("profileImage") val profileImage: String,
+    @SerializedName("profileImage") val profileImage: String?,
     @SerializedName("providerId") val providerId: Int,
     //@SerializedName("startTime") val startTime: Long
 )

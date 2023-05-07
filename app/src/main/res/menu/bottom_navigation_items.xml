@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_discover"
+        android:title="@string/menu_discover"
+        android:icon="@drawable/ic_discover" />
+    <item android:id="@+id/action_reconnect"
+        android:title="@string/menu_reconnect"
+        android:icon="@drawable/ic_reconnect" />
+    <item android:id="@+id/action_bookings"
+        android:title="@string/menu_bookings"
+        android:icon="@drawable/ic_booking" />
+    <item android:id="@+id/action_messages"
+        android:title="@string/menu_messages"
+        android:icon="@drawable/ic_message" />
+    <item android:id="@+id/action_blogs"
+        android:title="@string/menu_blogs"
+        android:icon="@drawable/ic_blogs" />
+</menu>
