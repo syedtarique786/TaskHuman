@@ -81,4 +81,11 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="Theme.App.Starting" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.HumanTask</item>
+        <item name="windowSplashScreenBackground">@color/teal_700</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/purple_700</item>
+    </style>
+
 </resources>
